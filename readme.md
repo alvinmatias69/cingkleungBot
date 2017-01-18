@@ -33,7 +33,9 @@ $ npm start
 ```
 ### Contributors
 * **Habib Fikri** - *Providing API and making this project to happen* - [harkce](https://github.com/harkce "Habib's github")
+
 ### Changelog
+
 ```sh
 ```
 
