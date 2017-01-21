@@ -44,6 +44,18 @@ var userService = {
 				user_id: id
 			}
 		});
+	},
+
+	delete: function(id, callback) {
+		user.destroy({
+			where: {
+				user_id: id
+			},
+			force: true
+		})
+			.then(function(farmer) {
+				callback(farmer);
+			});
 	}
 }
 

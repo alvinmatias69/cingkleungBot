@@ -8,16 +8,18 @@ let url = 'https://api.telegram.org/bot' + process.env.API_TOKEN + '/';
 
 var telegramService = {
 	message: function(chatId, text, keyboard, callback) {
-		axios.post(url + 'sendMessage', {
+		let body = {
 			chat_id		: chatId,
-			text		: text,
-			reply_markup: {
-				inlineKeyboardMarkup:{
-					inlineKeyboard: keyboard
-				}
-			}
-		}).then(function(response) {
-			callback(response);
+			text		: text
+		}
+
+		if (keyboard) {
+			body.reply_markup = {};
+			body.reply_markup.inline_keyboard = keyboard;
+		}
+		axios.post(url + 'sendMessage', body)
+			.then(function(response) {
+				callback(response);
 		});
 	},
 
@@ -26,9 +28,7 @@ var telegramService = {
 			chat_id		: chatId,
 			text 		: text,
 			reply_markup: {
-				inlineKeyboardMarkup:{
-					inlineKeyboard: keyboard
-				}
+				inline_keyboard: keyboard
 			}
 		}).then(response => {
 			axios.post(url + 'answerCallbackQuery', {
@@ -37,6 +37,13 @@ var telegramService = {
 			});
 			callback(response);
 		})
+	},
+
+	answerCallbackQuery: function(callbackQueryId, text) {
+		axios.post(url + 'answerCallbackQuery', {
+			callback_query_id		: callbackQueryId,
+			text 					: queryText
+		});
 	},
 
 	sticker: function(chatId, stickerId) {

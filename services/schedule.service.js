@@ -12,6 +12,13 @@ var scheduleService = {
 			.then(function(response) {
 				callback(response.data);
 			});
+	},
+
+	getClassRoom: function(page, roomCode, callback) {
+		axios.get(scheduleUrl + 'getJadwal/' + page + '?result_per_page=5&ruangan=' + roomCode)
+			.then(function(response) {
+				callback(response.data);
+			});
 	}
 }
 
