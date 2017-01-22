@@ -56,6 +56,7 @@ $ npm start
 > - test.js for testing each component and test_sequence.js to simulated user's usage
 > **Others**
 > - JSON request now adapted to real JSON request from telegram
+>
 > ### 0.0.1 (2017-01-18)
 > **Initial Commit**
 > - Basic operation defined (send message, ask for NIM, save to database, etc)
