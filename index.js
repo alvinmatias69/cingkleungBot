@@ -22,21 +22,25 @@ app.post('/cingkleung', function(req, res) {
 		let thisMessage = message.callback_query;
 		switch(thisMessage.data){
 			case 'schedule_check':
+				console.log('schedule_check');
 				cingkleungController.scheduleCheck(thisMessage, function(response) {
 					res.json(JSON.parse(response.config.data));
 				});
 				break;
 			case 'nim_change':
+				console.log('nim_change');
 				cingkleungController.nimChange(thisMessage, function(response) {
 					res.json(JSON.parse(response.config.data));
 				});
 				break;
 			case 'classroom_check':
+				console.log('classroom_check');
 				cingkleungController.classroomCheck(thisMessage, function(response) {
 					res.json(JSON.parse(response.config.data));
 				});
 				break;
 			default : 
+				console.log('default');
 				cingkleungController.checkPhase(thisMessage, function(result) {
 					cingkleungController.nextClassrooms(thisMessage, result, function(response) {
 						res.json(JSON.parse(response.config.data));
@@ -49,20 +53,24 @@ app.post('/cingkleung', function(req, res) {
 
 		let thisMessage = message.message;
 		if (thisMessage.text == '/start') {
+			console.log('start');
 			cingkleungController.start(thisMessage, function(response) {
 				res.json(JSON.parse(response.config.data));
 			});
 		} else {
 			cingkleungController.checkPhase(thisMessage, function(result) {
 				if (result == 'input NIM') {
+					console.log('input nim');
 					cingkleungController.nimInput(thisMessage, function(response) {
 						res.json(JSON.parse(response.config.data));
 					});
 				}else if(result == 'input classroom code'){
+					console.log('input classroom');
 					cingkleungController.showClassrooms(thisMessage, function(response) {
 						res.json(JSON.parse(response.config.data));
 					});
 				}else{
+					console.log('underMaintenance');
 					cingkleungController.underMaintenance(thisMessage, function(response) {
 						res.json(JSON.parse(response.config.data));
 					});
