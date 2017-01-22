@@ -51,9 +51,11 @@ $ npm start
 > - classroom check added
 > - classroom query saved in database for simplicity
 > - classroom check divided to two section (sendMessage and answerCallbackQuery)
+>
 > **Testing**
 > - automated testing added (see testing section)
 > - test.js for testing each component and test_sequence.js to simulated user's usage
+>
 > **Others**
 > - JSON request now adapted to real JSON request from telegram
 >
