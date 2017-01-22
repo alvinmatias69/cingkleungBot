@@ -125,6 +125,7 @@ var cingkleungController = {
 		});
 	},
 
+	// called from callback query classroom_check
 	classroomCheck: function(message, callback) {
 		let text = 'Silahkan masukkan nomor ruangan untuk mengecek jadwal pada ruangan tersebut \nps: nomor ruangan tidak perlu terlalu lengkap (A303, A30, 303, etc)';
 		let thisKeyboard = [
@@ -139,6 +140,7 @@ var cingkleungController = {
 		});
 	},
 
+	// called when user input classroom query at phase "input classroom code"
 	showClassrooms: function(message, callback) {		
 		scheduleService.getClassRoom(1, message.text, function(result) {
 			let text = 'Hasil pencarian query "' + message.text + '" (' + result.current_page + '/' + result.last_page + ') :\n';
@@ -175,6 +177,7 @@ var cingkleungController = {
 		});
 	},
 
+	// called from "selanjutnya"s callback query
 	nextClassrooms: function(message, query, callback) {
 		scheduleService.getClassRoom(message.data, query, function(result) {
 			let text = 'Hasil pencarian query "' + query + '" (' + result.current_page + '/' + result.last_page + ') :\n';

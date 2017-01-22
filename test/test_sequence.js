@@ -7,33 +7,37 @@ var userService = require('../services/user.service');
 chai.use(chaiHttp);
 
 let message = {
-	"message_id": 157,
-	"from": {
-		"id": 51787124,
-		"first_name": "Matias",
-		"last_name": "Alvin",
-		"username": "alvinmatias69"
-	},
-	"chat": {
-		"id": 51787124,
-		"first_name": "Matias",
-		"last_name": "Alvin",
-		"username": "alvinmatias69",
-		"type": "private"
-	},
-	"date": 1484657260,
-	"text": ""
+	message: {
+		"message_id": 157,
+		"from": {
+			"id": 51787124,
+			"first_name": "Matias",
+			"last_name": "Alvin",
+			"username": "alvinmatias69"
+		},
+		"chat": {
+			"id": 51787124,
+			"first_name": "Matias",
+			"last_name": "Alvin",
+			"username": "alvinmatias69",
+			"type": "private"
+		},
+		"date": 1484657260,
+		"text": ""
+	}
 }
 
 let cbMessage = {
-	"id": "175",
-	"from": {
-		"id": 51787124,
-		"first_name": "Matias",
-		"last_name": "Alvin",
-		"username": "alvinmatias69"
-	},
-	"data": ""
+	callback_query: {
+		"id": "175",
+		"from": {
+			"id": 51787124,
+			"first_name": "Matias",
+			"last_name": "Alvin",
+			"username": "alvinmatias69"
+		},
+		"data": ""
+	}
 }
 
 describe("sequence test", function() {

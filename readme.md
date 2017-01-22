@@ -1,5 +1,4 @@
-# Cingkleung BOT 0.0.1 (Alpha)
-### (deprecated, to be edited with new changelog)
+# Cingkleung BOT 0.1.0 (Beta)
 Telegram chat bot for checking students schedules.
 ## Getting Started
 To get a copy of this bot just simply clone this repository
@@ -17,7 +16,7 @@ Open the applications folder using terminal then install the required library
 $ cd cingkleungBot
 $ npm install
 ```
-Open .env.example file using text manager and change it according to your own environment variables
+Open .env.example file using text manager and change it according to your own environment variables, then rename it to .env
 ```
 API_TOKEN=exampleAPIToken:213941024921 //your telegram bot api token
 DB_NAME=exampleDB                      //your database name
@@ -27,9 +26,19 @@ DB_HOST=exampleHost                    //your database host
 DB_DIALECT=mysql                       //your database dialect (default mysql)
 SCHEDULE_URL=exampleUrl                //your api source url
 ```
+
+### Testing
+This apps using mochajs and chaijs for automated testing
+```sh
+$ cd cingkleungBot
+$ npm test
+```
+the test should have 26 test case passed
+
 ### Run Bot Apps
 Simply go to your bot folder location using terminal and start script using npm.
 ```sh
+$ cd cingkleungBot
 $ npm start
 ```
 ### Contributors
@@ -37,7 +46,20 @@ $ npm start
 
 ### Changelog
 
-```sh
-```
+> ### 0.1.0 (2017-01-22)
+> **Feature**
+> - classroom check added
+> - classroom query saved in database for simplicity
+> - classroom check divided to two section (sendMessage and answerCallbackQuery)
+> **Testing**
+> - automated testing added (see testing section)
+> - test.js for testing each component and test_sequence.js to simulated user's usage
+> **Others**
+> - JSON request now adapted to real JSON request from telegram
+> ### 0.0.1 (2017-01-18)
+> **Initial Commit**
+> - Basic operation defined (send message, ask for NIM, save to database, etc)
+> - untested version, don't pull from this version!!
+
 
 **Matias Alvin (2017)**
