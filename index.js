@@ -48,7 +48,7 @@ app.post('/cingkleung', function(req, res) {
 	} else {
 
 		let thisMessage = message.message;
-		if (message.text == '/start') {
+		if (thisMessage.text == '/start') {
 			cingkleungController.start(thisMessage, function(response) {
 				res.json(JSON.parse(response.config.data));
 			});
