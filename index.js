@@ -5,6 +5,7 @@
 var app = require('express')();
 var bodyParser = require('body-parser');
 var cingkleungController = require('./controllers/cingkleung.controller');
+var loggerService = require('./services/logger.service');
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({
@@ -15,6 +16,7 @@ app.use(bodyParser.json({
 	type: 'application/json'
 }));
 
+app.use(loggerService)
 
 app.post('/cingkleung', function(req, res) {
 	const message = req.body;
