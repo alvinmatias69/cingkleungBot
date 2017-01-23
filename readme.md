@@ -1,4 +1,4 @@
-# Cingkleung BOT 0.1.0 (Beta)
+# Cingkleung BOT 0.1.1 (Beta)
 Telegram chat bot for checking students schedules.
 ## Getting Started
 To get a copy of this bot just simply clone this repository
@@ -46,6 +46,9 @@ $ npm start
 
 ### Changelog
 
+> ### 0.1.1 (2017-01-23)
+> - testing script fixed, so it can run on telegram like JSON request
+>
 > ### 0.1.0 (2017-01-22)
 > **Feature**
 > - classroom check added

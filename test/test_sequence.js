@@ -49,7 +49,7 @@ describe("sequence test", function() {
 
 	it('It should return "silahkan masukkan ..."', function(done) {
 		let thisMessage = message;
-		thisMessage.text = '/start';
+		thisMessage.message.text = '/start';
 
 		chai.request(server)
 			.post('/cingkleung')
@@ -67,7 +67,7 @@ describe("sequence test", function() {
 
 	it('It should return error "NIM yang anda inputkan ..."', function(done) {
 		let thisMessage = message;
-		thisMessage.text = '130114404r';
+		thisMessage.message.text = '130114404r';
 
 		chai.request(server)
 			.post('/cingkleung')
@@ -85,7 +85,7 @@ describe("sequence test", function() {
 
 	it('It should return "NIM berhasil disimpan" with inline keyboard', function(done) {
 		let thisMessage = message;
-		thisMessage.text = '1301144048';
+		thisMessage.message.text = '1301144048';
 
 		chai.request(server)
 			.post('/cingkleung')
@@ -103,7 +103,7 @@ describe("sequence test", function() {
 
 	it('It should return "Mohon maaf ..." with inline keyboard #1', function(done) {
 		let thisMessage = message
-		thisMessage.text = "only sith deal with absolute";
+		thisMessage.message.text = "only sith deal with absolute";
 
 		chai.request(server)
 			.post('/cingkleung')
@@ -121,7 +121,7 @@ describe("sequence test", function() {
 
 	it('It should return students schedule with inline keyboard', function(done) {
 		let thisCbMessage = cbMessage;
-		thisCbMessage.data = "schedule_check";
+		thisCbMessage.callback_query.data = "schedule_check";
 
 		chai.request(server)
 			.post('/cingkleung')
@@ -138,7 +138,7 @@ describe("sequence test", function() {
 
 	it('It should return "Mohon maaf ..." with inline keyboard #2', function(done) {
 		let thisMessage = message
-		thisMessage.text = "only sith deal with absolute";
+		thisMessage.message.text = "only sith deal with absolute";
 
 		chai.request(server)
 			.post('/cingkleung')
@@ -156,7 +156,7 @@ describe("sequence test", function() {
 
 	it('It should ask for nim with inline keyboard', function(done) {
 		let thisCbMessage = cbMessage;
-		thisCbMessage.data = "nim_change";
+		thisCbMessage.callback_query.data = "nim_change";
 
 		chai.request(server)
 			.post('/cingkleung')
@@ -174,7 +174,7 @@ describe("sequence test", function() {
 
 	it('It should return students schedule with inline keyboard #2', function(done) {
 		let thisCbMessage = cbMessage;
-		thisCbMessage.data = "schedule_check";
+		thisCbMessage.callback_query.data = "schedule_check";
 
 		chai.request(server)
 			.post('/cingkleung')
@@ -191,7 +191,7 @@ describe("sequence test", function() {
 
 	it('It should ask for nim with inline keyboard #2', function(done) {
 		let thisCbMessage = cbMessage;
-		thisCbMessage.data = "nim_change";
+		thisCbMessage.callback_query.data = "nim_change";
 
 		chai.request(server)
 			.post('/cingkleung')
@@ -209,7 +209,7 @@ describe("sequence test", function() {
 
 	it('It should return error "NIM yang anda inputkan ..." #2', function(done) {
 		let thisMessage = message;
-		thisMessage.text = '130114404r';
+		thisMessage.message.text = '130114404r';
 
 		chai.request(server)
 			.post('/cingkleung')
@@ -245,7 +245,7 @@ describe("sequence test", function() {
 
 	it('It should ask for classroom query with inline keyboard', function(done) {
 		let thisCbMessage = cbMessage;
-		thisCbMessage.data = "classroom_check";
+		thisCbMessage.callback_query.data = "classroom_check";
 
 		chai.request(server)
 			.post('/cingkleung')
@@ -263,7 +263,7 @@ describe("sequence test", function() {
 
 	it('It should return students schedule with inline keyboard #3', function(done) {
 		let thisCbMessage = cbMessage;
-		thisCbMessage.data = "schedule_check";
+		thisCbMessage.callback_query.data = "schedule_check";
 
 		chai.request(server)
 			.post('/cingkleung')
@@ -280,7 +280,7 @@ describe("sequence test", function() {
 
 	it('It should ask for classroom query with inline keyboard #2', function(done) {
 		let thisCbMessage = cbMessage;
-		thisCbMessage.data = "classroom_check";
+		thisCbMessage.callback_query.data = "classroom_check";
 
 		chai.request(server)
 			.post('/cingkleung')
@@ -298,7 +298,7 @@ describe("sequence test", function() {
 
 	it('It should return list of classrooms', function(done) {
 		let thisMessage = message;
-		thisMessage.text = '303';
+		thisMessage.message.text = '303';
 
 		chai.request(server)
 			.post('/cingkleung')
@@ -315,7 +315,7 @@ describe("sequence test", function() {
 
 	it("It should return page 2 of classrooms list", function(done) {
 		let thisCbMessage = cbMessage;
-		thisCbMessage.data = "2";
+		thisCbMessage.callback_query.data = "2";
 
 		chai.request(server)
 			.post('/cingkleung')
@@ -332,7 +332,7 @@ describe("sequence test", function() {
 
 	it('It should return students schedule with inline keyboard #4', function(done) {
 		let thisCbMessage = cbMessage;
-		thisCbMessage.data = "schedule_check";
+		thisCbMessage.callback_query.data = "schedule_check";
 
 		chai.request(server)
 			.post('/cingkleung')
