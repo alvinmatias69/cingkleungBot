@@ -13,8 +13,9 @@ var spamService = function(req, res, next) {
 
 	if (user == '302707362') {
 		res.end();
+	}else{
+		next();
 	}
-	next();
 }
 
 module.exports = spamService;
