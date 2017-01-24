@@ -1,4 +1,5 @@
 # Cingkleung BOT 0.3.0 (Beta)
+### Deprecated to be updated soon
 Telegram chat bot for checking students schedules.
 ## Getting Started
 To get a copy of this bot just simply clone this repository
