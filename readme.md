@@ -52,6 +52,7 @@ $ npm start
 > - added feedbacks table to contain the feedback
 > - added feedback service for adding feedbacks
 > - added 2 new test case to both test.js and test_sequence.js
+>
 > **bug fix**
 > - sequence test callback message json structure fixed
 >
