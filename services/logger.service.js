@@ -16,7 +16,7 @@ var loggerService = function(req, res, next) {
 	if (message.hasOwnProperty('callback_query')) {
 		logData = logData + message.callback_query.data + ',' + message.callback_query.from.id + ',' + message.callback_query.from.username + '\n';
 	}else{
-		logData = logData + message.message.text + ',' + message.message.from.id + ',' + message.callback_query.from.username + '\n';
+		logData = logData + message.message.text + ',' + message.message.from.id + ',' + message.message.from.username + '\n';
 	}
 	fs.appendFile('log/log.txt', logData);
 	next();
