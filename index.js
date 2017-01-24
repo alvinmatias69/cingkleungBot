@@ -38,6 +38,11 @@ app.post('/cingkleung', function(req, res) {
 					res.json(JSON.parse(response.config.data));
 				});
 				break;
+			case 'feedback':
+				cingkleungController.feedback(thisMessage, function(response) {
+					res.json(JSON.parse(response.config.data));
+				});
+				break;
 			default : 
 				cingkleungController.checkPhase(thisMessage, function(result) {
 					cingkleungController.nextClassrooms(thisMessage, result, function(response) {
@@ -62,6 +67,10 @@ app.post('/cingkleung', function(req, res) {
 					});
 				}else if(result == 'input classroom code'){
 					cingkleungController.showClassrooms(thisMessage, function(response) {
+						res.json(JSON.parse(response.config.data));
+					});
+				}else if(result == 'feedback') {
+					cingkleungController.sendFeedback(thisMessage, function(response) {
 						res.json(JSON.parse(response.config.data));
 					});
 				}else{

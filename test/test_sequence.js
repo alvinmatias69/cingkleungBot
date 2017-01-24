@@ -227,7 +227,7 @@ describe("sequence test", function() {
 
 	it('It should return "NIM berhasil disimpan" with inline keyboard #2', function(done) {
 		let thisMessage = message;
-		thisMessage.text = '1301144048';
+		thisMessage.message.text = '1301144048';
 
 		chai.request(server)
 			.post('/cingkleung')
@@ -339,6 +339,42 @@ describe("sequence test", function() {
 			.send(thisCbMessage)
 			.end(function(err, res) {
 				res.should.have.status(200);
+				res.body.should.have.property("reply_markup");
+				userService.find(51787124, function(result) {
+					result.phase.should.equal('not allowed');
+				});
+				done();
+			});
+	});
+
+	it('It should ask for user feedback with text "Terimakasih telah ..." with inline keyboard', function(done) {
+		let thisCbMessage = cbMessage;
+		thisCbMessage.callback_query.data = "feedback";
+
+		chai.request(server)
+			.post('/cingkleung')
+			.send(thisCbMessage)
+			.end(function(err, res) {
+				res.should.have.status(200);
+				res.body.should.have.property("reply_markup");
+				res.body.should.have.property("text").eql("Terimakasih telah menggunakan layanan Jadwal Tel-U Bot, silahkan kirimkan kritik dan saran terhadap pelayanan kami");
+				userService.find(51787124, function(result) {
+					result.phase.should.equal('feedback');
+				});
+				done();
+			});
+	});
+
+	it('It should return "Terimakasih atas feedback ..."', function(done) {
+		let thisMessage = message;
+		thisMessage.message.text = 'very cool apps, really like it';
+
+		chai.request(server)
+			.post('/cingkleung')
+			.send(thisMessage)
+			.end(function(err, res) {
+				res.should.have.status(200);
+				res.body.should.have.property("text").eql("Terimakasih atas feedback yang telah anda berikan");
 				res.body.should.have.property("reply_markup");
 				userService.find(51787124, function(result) {
 					result.phase.should.equal('not allowed');

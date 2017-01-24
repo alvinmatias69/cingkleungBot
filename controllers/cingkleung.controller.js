@@ -6,6 +6,7 @@ require('dotenv').config();
 var userService = require('../services/user.service');
 var scheduleService = require('../services/schedule.service');
 var telegramService = require('../services/telegram.service');
+var feedbackService = require('../services/feedback.service');
 var axios = require('axios');
 
 let url = 'https://api.telegram.org/bot' + process.env.API_TOKEN + '/';
@@ -21,6 +22,10 @@ let keyboard = [
 	[{
 		text: 'Cek Ruangan',
 		callback_data: 'classroom_check'
+	}],
+	[{
+		text: 'Feedback',
+		callback_data: 'feedback'
 	}]
 ];
 
@@ -207,6 +212,37 @@ var cingkleungController = {
 				callback(response);
 			});
 		});	
+	},
+
+	feedback: function(message, callback) {
+		let thisKeyboard = [
+			[{
+				text: 'Kembali ke menu utama',
+				callback_data: 'schedule_check'
+			}]
+		];		
+
+
+		let text = 'Terimakasih telah menggunakan layanan Jadwal Tel-U Bot, silahkan kirimkan kritik dan saran terhadap pelayanan kami';
+		telegramService.sticker(message.from.id, 'BQADAgADJQYAAlOx9wMHrAyrfS3V3gI');
+		telegramService.messageAndAnswerCallback(message.from.id, text, thisKeyboard, message.id, 'Feedback', function(response) {
+			userService.changePhase(message.from.id, 'feedback');
+			callback(response);
+		});
+	},
+
+	sendFeedback: function(message, callback) {
+		let thisKeyboard = keyboard;
+		let feedback = {
+			user_id: message.from.id,
+			feedback: message.text
+		}
+
+		feedbackService.create(feedback);
+		telegramService.message(message.from.id, 'Terimakasih atas feedback yang telah anda berikan', thisKeyboard, function(response) {
+			userService.changePhase(message.from.id, 'not allowed');
+			callback(response);
+		});
 	},
 
 	// under maintenance message
