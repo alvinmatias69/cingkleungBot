@@ -1,5 +1,4 @@
-# Cingkleung BOT 0.3.0 (Beta)
-### Deprecated to be updated soon
+# Cingkleung BOT 0.4.0 (Beta)
 Telegram chat bot for checking students schedules.
 ## Getting Started
 To get a copy of this bot just simply clone this repository
@@ -47,6 +46,14 @@ $ npm start
 
 ### Changelog
 
+> ### 0.4.0 (2017-01-24)
+> **Spam Filter**
+> - added spam service to filter spam
+> - chat from vasu geramona (id: 302707362) now considered as spam
+> 
+> **fix**
+> - added username collumn in csv log
+>
 > ### 0.3.0 (2017-01-24)
 > **Feedback**
 > - feedback option added

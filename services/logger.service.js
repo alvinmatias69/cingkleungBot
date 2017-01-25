@@ -22,7 +22,6 @@ var loggerService = function(req, res, next) {
 	next();
 }
 
-
 module.exports = loggerService;
 
 })();
