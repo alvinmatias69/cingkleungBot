@@ -12,7 +12,6 @@ var loggerService = function(req, res, next) {
 
 	const message = req.body;
 	let logData = new Date() + ',';
-	console.log(message);
 	if (message.hasOwnProperty('callback_query')) {
 		logData = logData + message.callback_query.data + ',' + message.callback_query.from.id + ',' + message.callback_query.from.username + '\n';
 	}else{

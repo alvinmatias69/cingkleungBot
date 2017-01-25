@@ -7,6 +7,7 @@ var bodyParser = require('body-parser');
 var cingkleungController = require('./controllers/cingkleung.controller');
 var loggerService = require('./services/logger.service');
 var spamService = require('./services/spam.service');
+var flushRequestService = require('./services/flush_request.service');
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({
@@ -17,6 +18,7 @@ app.use(bodyParser.json({
 	type: 'application/json'
 }));
 
+// app.use(flushRequestService);
 app.use(spamService);
 app.use(loggerService);
 
