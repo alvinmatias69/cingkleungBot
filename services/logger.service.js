@@ -5,9 +5,13 @@
 const fs = require('fs');
 
 var loggerService = function(req, res, next) {
-	if (!fs.existsSync('log/log.txt')) {
+	let date = new Date();
+
+	let logName = date.getDate() + '-' + date.getMonth() + '-' + date.getFullYear();
+
+	if (!fs.existsSync('log/' + logName + '.txt')) {
 		let header = 'date,query,user,username\n';
-		fs.writeFileSync('log/log.txt', header, {flag : 'w'});
+		fs.writeFileSync('log/' + logName + '.txt', header, {flag : 'w'});
 	}
 
 	const message = req.body;
@@ -17,7 +21,7 @@ var loggerService = function(req, res, next) {
 	}else{
 		logData = logData + message.message.text + ',' + message.message.from.id + ',' + message.message.from.username + '\n';
 	}
-	fs.appendFile('log/log.txt', logData);
+	fs.appendFile('log/' + logName + '.txt', logData);
 	next();
 }
 

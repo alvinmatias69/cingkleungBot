@@ -1,0 +1,33 @@
+date,query,user,username
+Sat Feb 04 2017 11:01:16 GMT+0700 (WIB),/start,51787124,alvinmatias69
+Sat Feb 04 2017 11:01:18 GMT+0700 (WIB),/start,51787124,alvinmatias69
+Sat Feb 04 2017 11:01:20 GMT+0700 (WIB),1301144048,51787124,alvinmatias69
+Sat Feb 04 2017 11:01:21 GMT+0700 (WIB),130114404r,51787124,alvinmatias69
+Sat Feb 04 2017 11:01:23 GMT+0700 (WIB),130114404,51787124,alvinmatias69
+Sat Feb 04 2017 11:01:25 GMT+0700 (WIB),303,51787124,alvinmatias69
+Sat Feb 04 2017 11:01:44 GMT+0700 (WIB),very cool apps, really like it,51787124,alvinmatias69
+Sat Feb 04 2017 11:01:46 GMT+0700 (WIB),only sith deal with absolute,51787124,alvinmatias69
+Sat Feb 04 2017 11:01:47 GMT+0700 (WIB),schedule_check,51787124,alvinmatias69
+Sat Feb 04 2017 11:01:54 GMT+0700 (WIB),nim_change,51787124,alvinmatias69
+Sat Feb 04 2017 11:01:56 GMT+0700 (WIB),classroom_check,51787124,alvinmatias69
+Sat Feb 04 2017 11:01:58 GMT+0700 (WIB),2,51787124,alvinmatias69
+Sat Feb 04 2017 11:02:05 GMT+0700 (WIB),feedback,51787124,alvinmatias69
+Sat Feb 04 2017 11:02:06 GMT+0700 (WIB),/start,51787124,alvinmatias69
+Sat Feb 04 2017 11:02:08 GMT+0700 (WIB),130114404r,51787124,alvinmatias69
+Sat Feb 04 2017 11:02:10 GMT+0700 (WIB),1301144048,51787124,alvinmatias69
+Sat Feb 04 2017 11:02:12 GMT+0700 (WIB),only sith deal with absolute,51787124,alvinmatias69
+Sat Feb 04 2017 11:02:14 GMT+0700 (WIB),schedule_check,51787124,alvinmatias69
+Sat Feb 04 2017 11:02:21 GMT+0700 (WIB),only sith deal with absolute,51787124,alvinmatias69
+Sat Feb 04 2017 11:02:23 GMT+0700 (WIB),nim_change,51787124,alvinmatias69
+Sat Feb 04 2017 11:02:25 GMT+0700 (WIB),schedule_check,51787124,alvinmatias69
+Sat Feb 04 2017 11:02:32 GMT+0700 (WIB),nim_change,51787124,alvinmatias69
+Sat Feb 04 2017 11:02:33 GMT+0700 (WIB),130114404r,51787124,alvinmatias69
+Sat Feb 04 2017 11:02:35 GMT+0700 (WIB),1301144048,51787124,alvinmatias69
+Sat Feb 04 2017 11:02:37 GMT+0700 (WIB),classroom_check,51787124,alvinmatias69
+Sat Feb 04 2017 11:02:38 GMT+0700 (WIB),schedule_check,51787124,alvinmatias69
+Sat Feb 04 2017 11:02:45 GMT+0700 (WIB),classroom_check,51787124,alvinmatias69
+Sat Feb 04 2017 11:02:47 GMT+0700 (WIB),303,51787124,alvinmatias69
+Sat Feb 04 2017 11:02:53 GMT+0700 (WIB),2,51787124,alvinmatias69
+Sat Feb 04 2017 11:02:59 GMT+0700 (WIB),schedule_check,51787124,alvinmatias69
+Sat Feb 04 2017 11:03:05 GMT+0700 (WIB),feedback,51787124,alvinmatias69
+Sat Feb 04 2017 11:03:08 GMT+0700 (WIB),very cool apps, really like it,51787124,alvinmatias69

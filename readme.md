@@ -1,4 +1,4 @@
-# Cingkleung BOT 0.5.0 (Beta)
+# Cingkleung BOT 0.5.1 (Beta)
 Telegram chat bot for checking students schedules.
 ## Getting Started
 To get a copy of this bot just simply clone this repository
@@ -53,6 +53,9 @@ $ npm start
 * **Habib Fikri** - *Providing API and making this project to happen* - [harkce](https://github.com/harkce "Habib's github")
 
 ### Changelog
+> ### 0.5.1 (2017-02-04)
+> - logged data will now saved in different files depend on the date log added
+>
 > ### 0.5.0 (2017-01-25)
 > **Flush Requests**
 > - flush request service now added
